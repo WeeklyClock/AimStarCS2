@@ -18,9 +18,9 @@ namespace GUI
 		{
 			ImGui::BeginTabBar("AimStar", ImGuiTabBarFlags_Reorderable | ImGuiTabBarFlags_FittingPolicyScroll | ImGuiTabBarFlags_NoTooltip);
 			// esp menu
-			if (ImGui::BeginTabItem(ICON_FA_EYE " ESP"))
+			if (ImGui::BeginTabItem("ESP"))
 			{
-				Gui.MyCheckBox("Enabled", &ESPConfig::ESPenbled);
+				Gui.MyCheckBox(u8"开启", &ESPConfig::ESPenbled);
 				ImGui::Checkbox("Box", &ESPConfig::ShowBoxESP);
 				ImGui::SameLine();
 				ImGui::ColorEdit4("##BoxColor", reinterpret_cast<float*>(&ESPConfig::BoxColor), ImGuiColorEditFlags_NoInputs);
