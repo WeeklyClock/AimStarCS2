@@ -66,9 +66,19 @@ External Cheat for CS2
 
 </details>
 
+## Disclamers
+- Features copied from UnknownCheats
+  - [Glow](https://www.unknowncheats.me/forum/counter-strike-2-a/604503-glow-external.html)
+  - [Weapon Icon](https://www.unknowncheats.me/forum/counter-strike-2-a/608799-weapon-icon-esp.html)
+  - [Spectator List](https://www.unknowncheats.me/forum/counter-strike-2-a/595247-spectator-list.html)
+  - [HitSound](https://www.unknowncheats.me/forum/counter-strike-2-releases/607417-hitsound-external.html)
+- Features intergrated from [Aeonix](https://github.com/Fr0go1/Aeonix-Cs2)
+  - Visible Check Box
+  - Corner Box
+  - Mouse Aimbot
+- Major help from Shinyaluvs
+
 ## Known Bugs
-> Sometimes the aimbot malfunctions and doesn't work properly.
-> 
 > Sometimes the ESP renders unclear large boxes or keeps the skeleton stationary.
 >
 > Glow blinking

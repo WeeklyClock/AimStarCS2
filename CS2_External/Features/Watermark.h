@@ -28,9 +28,9 @@ namespace Watermark
 		FrameRate = ImGui::GetIO().Framerate;
 		getCurrentTime(&ptm);
 
-		ImGui::Text("AimStar");
-		ImGui::Text("%d fps", FrameRate != 0.0f ? static_cast<int>(FrameRate) : 0);
-		ImGui::Text("%d:%d:%d", ptm.tm_hour, ptm.tm_min, ptm.tm_sec);
+		ImGui::Text("AimStar | %d fps | %d:%d:%d" , 
+			FrameRate != 0.0f ? static_cast<int>(FrameRate) : 0, 
+			ptm.tm_hour, ptm.tm_min, ptm.tm_sec);
 		ImGui::End();
 	}
 }

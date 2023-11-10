@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include "..\Entity.h"
 #include "..\MenuConfig.hpp"
+#pragma comment(lib, "winmm.lib")
 
 namespace HitSound
 {

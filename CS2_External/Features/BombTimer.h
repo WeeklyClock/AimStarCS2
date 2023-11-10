@@ -25,13 +25,13 @@ namespace bmb
 		{
 			int site;
 			uintptr_t cPlantedC4;
-			ProcessMgr.ReadMemory(gGame.GetClientDLLAddress() + Offset::GlobalVar.dwPlantedC4, cPlantedC4);
-			if (!ProcessMgr.ReadMemory<uintptr_t>(gGame.GetClientDLLAddress() + Offset::GlobalVar.dwPlantedC4, cPlantedC4))
+			ProcessMgr.ReadMemory(gGame.GetClientDLLAddress() + Offset::PlantedC4, cPlantedC4);
+			if (!ProcessMgr.ReadMemory<uintptr_t>(gGame.GetClientDLLAddress() + Offset::PlantedC4, cPlantedC4))
 				return 0;
 			if (!ProcessMgr.ReadMemory<uintptr_t>(cPlantedC4, cPlantedC4))
 				return 0;
 
-			if (!ProcessMgr.ReadMemory<int>(cPlantedC4 + Offset::PlantedC4.m_nBombSite, site))
+			if (!ProcessMgr.ReadMemory<int>(cPlantedC4 + Offset::C4.m_nBombSite, site))
 				return 0;
 
 			return site;
@@ -47,7 +47,7 @@ namespace bmb
 		bool isBombPlanted;
 		bool IsBeingDefused;
 		float DefuseTime;
-		auto plantedAddress = gGame.GetClientDLLAddress() + Offset::GlobalVar.dwPlantedC4 - 0x8;		
+		auto plantedAddress = gGame.GetClientDLLAddress() + Offset::PlantedC4 - 0x8;
 
 		static float windowWidth = 200.0f;
 		ImGuiWindowFlags flags = ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize;
@@ -59,8 +59,8 @@ namespace bmb
 
 		ProcessMgr.ReadMemory(plantedAddress, isBombPlanted);
 
-		ProcessMgr.ReadMemory(Offset::GlobalVar.dwPlantedC4 + Offset::PlantedC4.m_bBeingDefused, IsBeingDefused);
-		ProcessMgr.ReadMemory(Offset::GlobalVar.dwPlantedC4 + Offset::PlantedC4.m_flDefuseCountDown, DefuseTime);
+		ProcessMgr.ReadMemory(Offset::PlantedC4 + Offset::C4.m_bBeingDefused, IsBeingDefused);
+		ProcessMgr.ReadMemory(Offset::PlantedC4 + Offset::C4.m_flDefuseCountDown, DefuseTime);
 //		std::cout << IsBeingDefused << ", " << DefuseTime << std::endl;
 
 		auto time = currentTimeMillis();
